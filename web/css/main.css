@@ -1,0 +1,720 @@
+*,
+*:after,
+*:before {
+    padding: 0;
+    margin: 0;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: rgba(0, 0, 0, 1);
+}
+
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-size: 16px;
+    font-size: 1rem; /* = 16px */
+    line-height: 1.2;
+    color: #9e9e9e;
+    height: 100%;
+}
+
+::-moz-selection {
+    background: #a0c5e8;
+    text-shadow: none;
+}
+
+::selection {
+    background: #a0c5e8;
+    text-shadow: none;
+}
+
+/* Color de los placeholders */
+
+::-webkit-input-placeholder { color: #9e9e9e; }
+:-moz-placeholder { color: #9e9e9e; } /* Firefox 18- */ 
+::-moz-placeholder { color: #9e9e9e; } /* Firefox 19+ */
+:-ms-input-placeholder { color: #9e9e9e; } /* IE */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 16px 0;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+}
+.btn_loader{
+	background: url("../img/loading.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 16px;
+    margin: 10px;
+    width: 16px;
+    display:none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.input-box {
+    padding: 16px 0 0 0;
+    padding: 1rem 0 0 0;
+}
+
+/* ==========================================================================
+   UI
+   ========================================================================== */
+
+h1 {
+    font-size: 32px;
+    font-size: 2rem; /* = 32px */
+    margin: 9px 0;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 24px;
+    font-size: 1.5rem; /* = 24px */
+    margin: 9px 0;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 20px;
+    font-size: 1.25rem; /* = 20px */
+    margin: 9px 0;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 16px;
+    font-size: 1rem; /* = 16px */
+    margin: 9px 0;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 12px;
+    font-size: 0.75rem; /* = 12px */
+    margin: 9px 0;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 10px;
+    font-size: 0.625rem; /* = 10px */
+    margin: 9px 0;
+    font-weight: 400;
+}
+
+p {
+    font: 400 14px/1.4 'Arial', Helvetica, sans-serif;
+    font: 400 0.875rem/1.4 'Arial', Helvetica, sans-serif;
+    color: #9e9e9e;
+    margin: 0;
+}
+
+a.but {
+    border: none;
+    outline: none;
+    
+    display: inline-block;
+    vertical-align: top;
+    background-color: #7c7c7c;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: normal;
+    padding: 12px 16px;
+    padding: 0.75rem 1rem;
+    /*-webkit-transition: background linear 0.2s;*/
+       /*-moz-transition: background linear 0.2s;*/
+            /*transition: background linear 0.2s;*/
+}
+
+a.but:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+a.enlace {
+    font: 400 12px/1.4 'Arial', Helvetica, sans-serif;
+    font: 400 0.75rem/1.4 'Arial', Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 1);
+}
+
+a.enlace:hover {
+    text-decoration: underline;
+}
+
+input[type="radio"] {
+    display: inline-block;  
+    vertical-align: middle; 
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    background-color: #7c7c7c;
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: normal;
+    padding: 12px 16px;
+    padding: 0.75rem 1rem;
+    /*-webkit-transition: background linear 0.2s;*/
+       /*-moz-transition: background linear 0.2s;*/
+            /*transition: background linear 0.2s;*/  
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: rgba(255, 255, 255, 1);
+    color: #9e9e9e;
+    width: 100%;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: normal;
+    padding: 10px;
+    padding: 0.625rem;
+    outline: none;
+    border: 0;
+    -webkit-transition: background linear 0.2s;
+       -moz-transition: background linear 0.2s;
+            transition: background linear 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    /*background-color: #ebebeb;*/
+}
+
+.error {
+    display: block;
+    text-align: left;
+    font: 400 12px/1.4 'Arial', Helvetica, sans-serif;
+    font: 400 0.75rem/1.4 'Arial', Helvetica, sans-serif;
+    color: #f00;
+    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
+}
+
+.add-code input + label.error {
+    margin-top: 9px;
+}
+
+section:after,
+section:before {
+    padding: 28px 0 16px 0;
+    padding: 1.75rem 0 1rem 0;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+#header {
+    background-color: #ebebeb;
+    min-height: 32px;
+    font: 400 12px/1.4 'Arial', Helvetica, sans-serif;
+    font: 400 0.75rem/1.4 'Arial', Helvetica, sans-serif;
+    color: #9e9e9e;
+}
+
+#header-02 {
+    min-height: 32px;
+    font: 400 12px/1.4 'Arial', Helvetica, sans-serif;
+    font: 400 0.75rem/1.4 'Arial', Helvetica, sans-serif;
+    color: #9e9e9e;
+}
+
+.main-logo a {
+    padding: 8px 0;
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.main-logo-02 a {
+    padding: 8px 0;
+    padding: 0.5rem 0;
+    float: left;
+}
+
+ul.nav-menu {
+    float: right;
+}
+
+ul.nav-menu li {
+    float: left;
+    margin-right: 9px;
+}
+
+ul.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+ul.nav-menu li a {
+    padding: 8px 0 8px 28px;
+    padding: 0.5rem 0 0.5rem 1.75rem;
+    display: block;
+}
+
+ul.nav-menu li a:hover {}
+
+ul#rm-nav {
+    text-align: center;
+}
+
+ul#rm-nav li {
+    padding: 12px 0;
+    padding: 0.75rem 0;
+    background-color: #7c7c7c;
+}
+
+ul#rm-nav li:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+ul#rm-nav li a {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* ==========================================================================
+   Home
+   ========================================================================== */
+
+/* Section 01 */
+
+.hello-box .hello {
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+.hello-box .hello .user-box span {
+    font-weight: 700;
+}
+
+.hello-box .hello .user-codes span {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hello-box .add-code {
+    background-color: #ebebeb;
+    padding: 16px 28px;
+    padding: 1rem 1.75rem; 
+}
+
+.hello-box .add-code h3 {
+    font-weight: 700;
+}
+
+.hello-box .add-code #code-box {
+    margin: 9px 0;
+}
+
+.hello-box .add-code input {
+    margin: 9px 0 0px 0;
+}
+
+.hello-box .add-code a.add-code {
+    display: inline-block;
+    vertical-align: top;  
+    padding: 8px 0;
+    padding: 0.5rem 0;
+}
+
+/* Section 02 */
+
+.home-page .sec-02 .title-box {}
+
+.home-page .travel-box {
+    text-align: center;
+    background-color: #ebebeb;
+    padding: 28px;
+    padding: 1.75rem;
+    margin-bottom: 8px;
+    min-height: 175px;
+}
+
+.home-page .travel-box h3 {
+    font-weight: 700;
+}
+
+/* Section 03 */
+
+.home-page .sec-03 .title-box {}
+.home-page .sec-03 .title-box span {
+    font-weight: 700;
+}
+
+.home-page .experience {
+    background-color: #ebebeb;
+    padding: 32px 0;
+    padding: 2rem 0;
+    margin-top: 18px;
+}
+
+.home-page .experience-box.desc h3 {
+    font-weight: 700;
+}
+
+.home-page .experience-box.desc a.but {
+    margin-top: 9px;
+}
+
+.home-page .experience-box.days {
+    padding: 16px 28px;
+    padding: 1rem 1.75rem;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.home-page .experience-box.days span {
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Acceso & Pre-registro
+   ========================================================================== */
+
+/* Acceso */
+
+.access .access-box {
+    background-color: #ebebeb;
+    padding: 16px 28px;
+    padding: 1rem 1.75rem;
+    text-align: center;
+}
+
+.access .access-box h3 {
+    font-weight: 700;
+}
+
+.access .access-box input[type="text"],
+.access .access-box input[type="password"],
+.access .access-box input[type="submit"] {
+    margin: 9px 0;
+}
+
+.access-box .stuff-box {
+    font: 400 12px/1.6 'Arial', Helvetica, sans-serif;
+    font: 400 0.75rem/1.6 'Arial', Helvetica, sans-serif;
+    text-align: left;
+    padding: 0 0 16px 0;
+    padding: 0 0 1rem 0;
+}
+
+.access-box .stuff-box.forgot-pass {
+    text-align: center;
+}
+
+.access-box .stuff-box > div {
+    position: relative;
+    float: left;
+    vertical-align: middle;
+    margin-right: 9px;
+}
+
+.access-box .stuff-box.forgot-pass {
+    padding: 8px 0 16px 0;
+    padding: 0.5rem 0 1rem 0;
+}
+
+.access-box .stuff-box.forgot-pass a {
+    clear: both;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+}
+
+.access-box .stuff-box.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+/* Registro */
+
+.create-account {
+    text-align: center;
+    padding-top: 32px;
+    padding-top: 2rem;
+}
+
+.create-account span {}
+
+.create-account a {
+    font: 700 16px/1.4 'Arial', Helvetica, sans-serif;
+    font: 700 1rem/1.4 'Arial', Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 1);   
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+.access-date .dd,
+.access-date .mm,
+.access-date .aaaa {
+    float: left;
+}
+
+.access-date .dd,
+.access-date .mm {
+    width: 30%;
+}
+
+.access-date .dd input,
+.access-date .mm input {
+    border-right: 1px solid #ebebeb;
+}
+
+.access-date .aaaa {
+    width: 40%;
+}
+
+/* ==========================================================================
+   Contraseña & Contraseña enviada
+   ========================================================================== */
+
+/* Contraseña */
+
+.password-text {
+    font: 700 16px/1.4 'Arial', Helvetica, sans-serif;
+    font: 700 1rem/1.4 'Arial', Helvetica, sans-serif;
+    text-align: center;
+}
+
+.password-text h1 {
+    font-weight: 700;
+}
+
+.password-box {
+    padding: 16px 28px;
+    padding: 1rem 1.75rem;
+    text-align: center;
+}
+
+.password-box input[type="text"],
+.password-box input[type="password"],
+.password-box input[type="submit"] {
+    margin: 9px 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#footer { 
+    font: 400 12px/1.4 'Arial', Helvetica, sans-serif;
+    font: 400 0.75rem/1.4 'Arial', Helvetica, sans-serif;
+    color: #9e9e9e;
+    padding: 28px 0;
+    padding: 1.75rem 0;
+    text-align: center;
+}
+
+ul.footer-menu li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul.footer-menu li a {
+    padding: 8px 16px;
+    padding: 0.5rem 1rem;
+}
+
+ul.footer-menu li a:hover {}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+#server_response{
+	border: 1px solid #BBBBBB;
+    margin: 10px;
+    padding: 10px;
+    display: none;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: rgba(0, 0, 0, 1) !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

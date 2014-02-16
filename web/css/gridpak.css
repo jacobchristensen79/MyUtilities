@@ -1,0 +1,450 @@
+/*!
+ * Gridpak Beta CSS
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+ 
+ 
+
+/* Reusable column setup */
+.col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+
+
+    /* 1. 12 Column Grid 0px - 479px 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    8.33333333333%
+    Span 2:    16.6666666667%
+    Span 3:    25.0%
+    Span 4:    33.3333333333%
+    Span 5:    41.6666666667%
+    Span 6:    50.0%
+    Span 7:    58.3333333333%
+    Span 8:    66.6666666667%
+    Span 9:    75.0%
+    Span 10:    83.3333333333%
+    Span 11:    91.6666666667%
+    Span 12:    100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 0px) and (max-width: 479px) {
+        
+        .row {
+            margin-left:-24px;
+        }
+        .col {
+            border-left-width:24px;
+        	padding:0 0%;
+        }
+        
+        
+        
+        .page {
+            margin: 0 auto;
+            width: 95%;
+        }
+
+        ul.js {
+            display: none;
+        }
+
+        #rm-icon {
+            float: right;
+            width: 22px;
+            height: 18px;
+            padding: 7px;
+            padding: 0.4375rem;
+            background: transparent url(../img/hamburger.png) center center no-repeat;
+            cursor: pointer;
+
+            -webkit-box-sizing: content-box;
+               -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+        }
+
+        #rm-nav {
+            display: none;
+        }
+
+        .footer-menu li a {
+            display: block;
+        }
+
+        .footer-menu li span {
+            display: none;
+        }
+        
+
+
+        .span_1 {
+            width:8.33333333333%;
+        }
+        .span_2 {
+            width:16.6666666667%;
+        }
+        .span_3,
+        .main-logo {
+            width:25.0%;
+        }
+        .span_4,
+        .experience-box.days {
+            width:33.3333333333%;
+        }
+        .span_5 {
+            width:41.6666666667%;
+        }
+        .span_6 {
+            width:50.0%;
+        }
+        .span_7 {
+            width:58.3333333333%;
+        }
+        .span_8,
+        .experience-box.desc {
+            width:66.6666666667%;
+        }
+        .span_9,
+        .main-nav {
+            width:75.0%;
+        }
+        .span_10 {
+            width:83.3333333333%;
+        }
+        .span_11 {
+            width:91.6666666667%;
+        }
+        .span_12,
+        #rm-nav li,
+        .main-logo-02,
+        .hello-box,
+        .slider-box,
+        .home-page .title-box,
+        .home-page .travel-box,
+        .experience-box.thumb,
+        .access-page .white,
+        .access-page .access,
+        .password-page .white,
+        .password-page .password-box,
+        .create-account,
+        .footer-menu,
+        .footer-menu li,
+        .password-text {
+            margin-left:0;
+            width:100%;
+        }
+    }
+
+    /* 2. 12 Column Grid 480px - 639px 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    8.33333333333%
+    Span 2:    16.6666666667%
+    Span 3:    25.0%
+    Span 4:    33.3333333333%
+    Span 5:    41.6666666667%
+    Span 6:    50.0%
+    Span 7:    58.3333333333%
+    Span 8:    66.6666666667%
+    Span 9:    75.0%
+    Span 10:    83.3333333333%
+    Span 11:    91.6666666667%
+    Span 12:    100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 480px) and (max-width: 639px) {
+        
+        .row {
+            margin-left:-24px;
+        }
+        .col {
+            border-left-width:24px;
+        	padding:0 0%;
+        }
+
+
+
+        .page {
+            margin: 0 auto;
+            width: 95%;
+        }
+
+        ul.js {
+            display: none;
+        }
+
+        #rm-icon {
+            float: right;
+            width: 22px;
+            height: 18px;
+            padding: 7px;
+            padding: 0.4375rem;
+            background: transparent url(../img/hamburger.png) center center no-repeat;
+            cursor: pointer;
+
+            -webkit-box-sizing: content-box;
+               -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+        }
+
+        #rm-nav {
+            display: none;
+        }
+        
+        
+        
+        .span_1 {
+            width:8.33333333333%;
+        }
+        .span_2 {
+            width:16.6666666667%;
+        }
+        .span_3,
+        .main-logo {
+            width:25.0%;
+        }
+        .span_4 {
+            width:33.3333333333%;
+        }
+        .span_5 {
+            width:41.6666666667%;
+        }
+        .span_6 {
+            width:50.0%;
+        }
+        .span_7 {
+            width:58.3333333333%;
+        }
+        .span_8 {
+            width:66.6666666667%;
+        }
+        .span_9,
+        .main-nav {
+            width:75.0%;
+        }
+        .span_10 {
+            width:83.3333333333%;
+        }
+        .span_11 {
+            width:91.6666666667%;
+        }
+        .span_12 {
+            margin-left:0;
+            width:100%;
+        }
+    }
+
+    /* 3. 12 Column Grid 640px - 959px 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    8.33333333333%
+    Span 2:    16.6666666667%
+    Span 3:    25.0%
+    Span 4:    33.3333333333%
+    Span 5:    41.6666666667%
+    Span 6:    50.0%
+    Span 7:    58.3333333333%
+    Span 8:    66.6666666667%
+    Span 9:    75.0%
+    Span 10:    83.3333333333%
+    Span 11:    91.6666666667%
+    Span 12:    100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 640px) and (max-width: 959px) {
+        
+        .row {
+            margin-left:-24px;
+        }
+        .col {
+            border-left-width:24px;
+        	padding:0 0%;
+        }
+        
+        
+
+        .page {
+            margin: 0 auto;
+            width: 95%;
+        }
+
+        ul.js {
+            display: none;
+        }
+
+        #rm-icon {
+            float: right;
+            width: 22px;
+            height: 18px;
+            padding: 7px;
+            padding: 0.4375rem;
+            background: transparent url(../img/hamburger.png) center center no-repeat;
+            cursor: pointer;
+
+            -webkit-box-sizing: content-box;
+               -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+        }
+
+        #rm-nav {
+            display: none;
+        }
+        
+
+        
+        .span_1 {
+            width:8.33333333333%;
+        }
+        .span_2 {
+            width:16.6666666667%;
+        }
+        .span_3,
+        .main-logo {
+            width:25.0%;
+        }
+        .span_4 {
+            width:33.3333333333%;
+        }
+        .span_5 {
+            width:41.6666666667%;
+        }
+        .span_6 {
+            width:50.0%;
+        }
+        .span_7 {
+            width:58.3333333333%;
+        }
+        .span_8 {
+            width:66.6666666667%;
+        }
+        .span_9,
+        .main-nav {
+            width:75.0%;
+        }
+        .span_10 {
+            width:83.3333333333%;
+        }
+        .span_11 {
+            width:91.6666666667%;
+        }
+        .span_12 {
+            margin-left:0;
+            width:100%;
+        }
+    }
+
+    /* 4. 12 Column Grid 960px - Infinity 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    8.33333333333%
+    Span 2:    16.6666666667%
+    Span 3:    25.0%
+    Span 4:    33.3333333333%
+    Span 5:    41.6666666667%
+    Span 6:    50.0%
+    Span 7:    58.3333333333%
+    Span 8:    66.6666666667%
+    Span 9:    75.0%
+    Span 10:    83.3333333333%
+    Span 11:    91.6666666667%
+    Span 12:    100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 960px) {
+        
+        .row {
+            margin-left:-24px;
+        }
+        .col {
+            border-left-width:24px;
+        	padding:0 0%;
+        }
+        
+
+
+        .page {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #rm-icon {
+            display: none;
+        }
+
+        #rm-nav {
+            display: none;
+        }
+        
+
+
+        .span_1 {
+            width:8.33333333333%;
+        }
+        .span_2 {
+            width:16.6666666667%;
+        }
+        .span_3,
+        .main-logo,
+        .home-page .travel-box,
+        .experience-box.days {
+            width:25.0%;
+        }
+        .span_4,
+        .hello-box,
+        .experience-box.desc,
+        .access-page .white,
+        .access-page .access,
+        .password-page .white,
+        .password-page .password-box {
+            width:33.3333333333%;
+        }
+        .span_5,
+        .experience-box.thumb {
+            width:41.6666666667%;
+        }
+        .span_6 {
+            width:50.0%;
+        }
+        .span_7 {
+            width:58.3333333333%;
+        }
+        .span_8,
+        .slider-box {
+            width:66.6666666667%;
+        }
+        .span_9,
+        .main-nav {
+            width:75.0%;
+        }
+        .span_10 {
+            width:83.3333333333%;
+        }
+        .span_11 {
+            width:91.6666666667%;
+        }
+        .span_12,
+        #rm-nav li,
+        .main-logo-02,
+        .home-page .title-box,
+        .footer-menu,
+        .create-account,
+        .password-text {
+            margin-left:0;
+            width:100%;
+        }
+    }
+
