@@ -18,6 +18,7 @@ class FrmAutoloader
 		if ( $fls->fileExists($class) ) return true;
 		
 		$file = __DIR__."/../$class.php";
+		$file = str_replace('\\', '/', $file);
 		if ( file_exists($file))
 			include $file;	
 	}

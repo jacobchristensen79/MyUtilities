@@ -98,8 +98,8 @@ class App {
 		$this->_website = $http.'://'.$parsed['host'];
 	
 		// Routing File
-		$file = __DIR__ . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'routing.php';
-		if (!is_file($file)) return false;
+		$file = __DIR__ . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . 'routing.php';
+		if (!is_file($file)) die('Routing File is Required!! <br>'.$file);
 		include $file;
 		$this->_routing = $_routing;
 		$this->_languages = $_languages;

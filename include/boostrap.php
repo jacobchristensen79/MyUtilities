@@ -3,17 +3,14 @@ date_default_timezone_set('Europe/Madrid');
 define('ENVIRONMENT', 'DEVEL');
 
 // Config File
-include __DIR__.'/config/config.php';
-// Error Handler
-//include __DIR__.'/error_handler.php';
+include __DIR__.'/Config/config.php';
 
 // Autoloader Class
 include __DIR__.'/Classes/FrmAutoloader.php';
 
 spl_autoload_register(array('Classes\FrmAutoloader' , 'myAutoloader'));
 
-
-
+die('aqui');
 
 // USE this in file to prevent direct access
 /*

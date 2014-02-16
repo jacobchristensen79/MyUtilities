@@ -3,7 +3,6 @@ if(!defined('ENVIRONMENT')) die('Direct access not permitted');
 
 // Website
 define('default_lang','en');
-define('error_email', 'jc@divaid.com');
 
 // Global
 define('session_name', 'iXpUrlShortner');

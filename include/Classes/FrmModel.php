@@ -26,7 +26,7 @@ class FrmModel
 
 	private function setConfig()
 	{
-		$this->_db = new \PDO('mysql:host='._db_host.';dbname='._db_name.';charset=UTF-8', _db_user, _db_pass);
+		$this->_db = new \PDO('mysql:host='._db_host.';dbname='._db_name.'', _db_user, _db_pass);
 	}
 
 	public function getDb() {
