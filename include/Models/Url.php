@@ -20,7 +20,7 @@ class Url extends Base
 	 */
 	public function updateClicks()
 	{
-		$query = "UPDATE $this->_model set clicks=clicks+1 where id=:id";
+		$query = "UPDATE $this->_model set clicks=clicks+1, updated_at=NOW() where id=:id";
 		$db = $this->_db->prepare($query);
 		$db->bindParam(':id', $this->id, \PDO::PARAM_INT);
 		return $db->execute();

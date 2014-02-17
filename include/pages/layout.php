@@ -35,9 +35,9 @@
 						<ul id="nav" class="nav-menu">
 							<?php if($_username){ ?>
 							<li><a class="enlace" href="/" title="">Home</a></li>
-							<li><a class="enlace" href="<?php echo App::url('account', $_lang);?>" title="">Profile</a></li>
-							<li><a class="enlace" href="<?php echo App::url('logout', $_lang);?>" title="">Logout</a></li>	
-							<?php } ?>						
+							<li><a class="enlace" href="/<?php echo App::url('account', $_lang);?>" title="">Profile</a></li>
+							<li><a class="enlace" href="/<?php echo App::url('logout', $_lang);?>" title="">Logout</a></li>	
+							<?php } ?>				
 						</ul>
     				</div>
                 </div>
@@ -50,8 +50,8 @@
                     <ul id="rm-nav" class="row js">
 							<?php if($_username){ ?>
 							<li><a class="enlace" href="/" title="">Home</a></li>
-							<li><a class="enlace" href="<?php echo App::url('account', $_lang);?>" title="">Profile</a></li>
-							<li><a class="enlace" href="<?php echo App::url('logout', $_lang);?>" title="">Logout</a></li>	
+							<li><a class="enlace" href="/<?php echo App::url('account', $_lang);?>" title="">Profile</a></li>
+							<li><a class="enlace" href="/<?php echo App::url('logout', $_lang);?>" title="">Logout</a></li>	
 							<?php } ?>	
                     </ul>
                 </div>

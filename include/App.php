@@ -45,8 +45,7 @@ class App {
 	}
 	
 	public static function getInstance()
-	{
-		
+	{		
 		if (  !self::$_instance instanceof self)
 		{
 			self::$_instance = new self;
@@ -92,6 +91,9 @@ class App {
 	 */
 	private function setEnvironment()
 	{
+		$sesStarted = (session_status() === PHP_SESSION_ACTIVE) ? true : false;
+		if ( !$sesStarted ) session_start();
+		
 		$http = isset($_SERVER['HTTPS']) ? "https" : 'http';
 		$url = $http.'://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		$parsed = parse_url($url);
@@ -99,7 +101,7 @@ class App {
 	
 		// Routing File
 		$file = __DIR__ . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . 'routing.php';
-		if (!is_file($file)) die('Routing File is Required!! <br>'.$file);
+		if (!is_file($file)) return false;
 		include $file;
 		$this->_routing = $_routing;
 		$this->_languages = $_languages;
@@ -123,19 +125,23 @@ class App {
 				}
 			}
 		}
-	
+		
 		// Language
 		if ( isset($query[0]) && array_key_exists($query[0], $this->_languages) ){
 			$this->_lang = $query[0];
+			$_SESSION['userlanguage'] = $this->_lang;
 			unset($query[0]);
 			if(!empty($query)) $query = array_slice($query, 0);
+		} elseif(isset($_SESSION['userlanguage']) && !empty($_SESSION['userlanguage'])) {
+			$this->_lang = $_SESSION['userlanguage'];
 		} else {
 			$browserlang = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2) : false;
 			if ($browserlang && array_key_exists($browserlang, $this->_languages)) {
 				$this->_lang = $browserlang;
+				$_SESSION['userlanguage'] = $browserlang;
 			}
 		}
-	
+		
 		// Page QUery
 		if ( !empty( $query ) ) {
 			$this->_getRequest = $query;
@@ -214,22 +220,20 @@ class App {
 	 */
 	public function sessionStart(\Models\User $user=NULL)
 	{
-		$sesStarted = (session_status() === PHP_SESSION_ACTIVE) ? true : false; 
-		if ( !$sesStarted ) session_start();
-		
 		if ( $user ){
 			$_SESSION[session_name] = $user->username;
 			$_SESSION[session_name.'_id'] = $user->id;
-			$url = self::url('home', $this->_lang);
-			header('location: '.$url);
+			$url = self::url('home');
+			header('location: /'.$url);
 			exit();
-		}
+		}		
 		
 		// if no user go to login
 		if ( !isset($_SESSION[session_name]) || empty($_SESSION[session_name]) ){
+			
 			if ( $this->_requestedPage != 'login') {
-				$url = self::url('login', $this->_lang);
-				header('location: '.$url);
+				$url = self::url('login');
+				header('location: /'.$url);
 				exit();
 			}	
 		} else {
@@ -391,18 +395,19 @@ class App {
 	/**
 	 * URL generate
 	 */
-	public static function url( $action, $lang, $params=false, $full = false)
+	public static function url( $action, $lang=false, $params=false, $full = false)
 	{
 		$app = App::getInstance();
 		$routing = $app->getRouting();
 		$translations = $app->getTranslations();
 		$website = $app->getWebsite();
+		$lang = ($lang) ? $lang : $app->getLang();
 		
 		// Route
 		$route = ( isset($routing[$lang]) && isset($routing[$lang][$action]) ) ? $routing[$lang][$action] : 'not found';
 		
 		if ( empty($params) ) {
-			return ($full) ? $website.'/'.$route : $route;
+			return ($full) ? $website.'/'.$route : $lang.'/'.$route;
 		} else {
 			if ( is_array($params)) {
 				$str = '';
@@ -410,7 +415,7 @@ class App {
 			} else {
 				$str = $params;
 			}
-			return  ($full) ? $website.'/'.$route.'/'.$str : $route.'/'.$str;
+			return  ($full) ? $website.'/'.$route.'/'.$str : $route.'/'.$lang.'/'.$str;
 		}
 	
 	}
