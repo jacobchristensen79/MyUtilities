@@ -10,7 +10,6 @@ include __DIR__.'/Classes/FrmAutoloader.php';
 
 spl_autoload_register(array('Classes\FrmAutoloader' , 'myAutoloader'));
 
-die('aqui');
 
 // USE this in file to prevent direct access
 /*
